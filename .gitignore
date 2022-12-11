@@ -1,0 +1,4 @@
+# gitignore - Especifica arquivos intencionalmente não rastreados que o Git deve ignorar
+
+# Arquivo não rastreado: arquivos de configurações da IDE
+/.idea

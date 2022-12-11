@@ -1,0 +1,174 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness) | .5rem = 8px | 1rem = 16px  */
+    --color-body-theme: hsl(38, 69%, 59%);
+    --font-primary: 'Varela Round';
+    --normal-font-size: .938rem;
+    --color-body-title: #7885c4;
+    --color-msg-title: #3f3ec4;
+    --color-font-title: #ffffff;
+
+    /*========== Message styles ==========*/
+    --color-success: rgb(161, 255, 145);
+    --color-success-border: #09fa0f;
+    --color-warning: rgb(240, 230, 149);
+    --color-warning-border: #fcff00;
+    --color-alert: rgba(237, 32, 17, 0.5);
+    --color-alert-border: #fa0238;
+    --color-dump: #ffffff;
+    --color-dump-font: hsla(240, 34%, 47%, 0.98);
+    --color-dump-border: #a728fa;
+
+    /*========== Scrollbar styles =========*/
+    --color-scrollbar: #ff7244;
+    --color-body-scrollbar: rgba(13, 0, 4, 0.21);
+}
+
+/*=============== RESET ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*=============== HOME ===============*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-primary);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    padding: 100px;
+    background: var(--color-body-theme);
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+hr, pre{
+    margin: 15px 30px 15px 30px;
+    font-family: var(--font-primary), sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-dump-font);
+}
+
+
+.box__title{
+    margin: 0 30px 15px 30px;
+    padding: 20px;
+    border-radius: 16px 3px 3px 3px;
+    background: var(--color-body-title);
+    box-shadow: 5px 5px rgba(255, 255, 255, 0.74);
+    border-left: 15px solid #4f5b93;
+    color: var(--color-font-title);
+    font-family: var(--font-primary), Arial, Verdana, "Trebuchet MS", SansSerif, "Nirmala UI", "Times New Roman", serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    animation: floaty 1.8s infinite alternate;
+}
+
+.box__shadow{
+    width: 95%;
+    height: 24px;
+    background-color: hsla(38, 21%, 19%, .16);
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: shadow 1.8s infinite alternate;
+}
+
+/* Animate ghost */
+@keyframes floaty {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(15px);
+    }
+}
+
+@keyframes shadow {
+    0%{
+        transform: scale(1, 1);
+    }
+
+    100%{
+        transform: scale(.85, .385);
+    }
+}
+
+/*=============== MESSAGES ===============*/
+.msg__warning, .msg__alert, .msg__success, .msg__dump, .msg__default{
+    font-family: var(--font-primary), sans-serif;
+    padding: 15px;
+    margin: 15px 30px 15px 30px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    width: auto;
+    color: var(--color-msg-title);
+
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.59);
+    box-shadow: -1px -1px 1px 1px rgba(255, 255, 255, 0.74), 5px 5px rgba(162, 162, 162, 0.74);
+}
+
+.msg__success{
+    background: var(--color-success);
+    border-left: 15px solid var(--color-success-border);
+}
+
+.msg__warning{
+    background: var(--color-warning);
+    border-left: 15px solid var(--color-warning-border);
+}
+
+.msg__alert{
+    background: var(--color-alert);
+    border-left: 15px solid var(--color-alert-border);
+}
+
+.ri-wechat-2-line{
+    margin-right: 1rem;
+}
+
+.msg__dump{
+    background: var(--color-dump);
+    border-left: 15px solid var(--color-dump-border);
+    color: var(--color-dump-font);
+    font-size: 15px;
+}
+
+/*=============== SCROLLBAR ===============*/
+::-webkit-scrollbar{
+    width: 15px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--color-scrollbar);
+    border-radius: 40px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--color-body-scrollbar);
+}

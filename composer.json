@@ -1,0 +1,20 @@
+{
+  "name": "rafaelblum/debugando-orientacao-a-objeto-php",
+  "description": "description_text",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rafael Blum",
+      "email": "rafaelblum_digital@hotmail.com"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    }
+  }
+}
